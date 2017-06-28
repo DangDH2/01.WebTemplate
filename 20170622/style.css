@@ -1,0 +1,258 @@
+/*** COMMON ***/
+html, body, h1, h2, h3, h4, ul, li {
+    margin: 0;
+    padding: 0;
+}
+h1 img {
+    display: block;
+}
+img {
+    border: 0;
+}
+a {
+    color: #464544;
+}
+a:hover {
+    color: #FFA405;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.more {
+    text-align: right;
+}
+.clear {
+    clear: both;
+}
+body {
+    text-align: center;
+    font: 11px verdana, arial, sans-serif;
+    color: #74653D;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    width: 90%;
+    min-width:1024px;
+    margin:auto;
+    background-color:#eee;
+}
+.CONTENT {
+    margin:auto;
+    width: 90%;
+    min-width:1024px;
+    position: relative;
+}
+/*** COMMON END ***/
+#header {
+    clear:both;
+    width: 100%;
+    height:200px;
+}
+#body {
+
+}
+#footer {
+    left:0;
+    width: 100%;
+    height: 250px;
+    background-color:#b7a677;
+    margin-bottom:1px;
+    position:absolute;
+}
+
+/*** HEADER ***/
+
+#topPanel{
+    top: 0;
+    left: 0;
+    position:absolute;
+    height:40px;
+    width:100%;
+    background:#333 none repeat scroll 0 0;
+}
+#logo{
+    width:200px;
+    height:35px;
+    float:left;
+}
+#LEFT_PANEL{
+    top: 45px;
+    left: 5px;
+    position:fixed;
+    width:8%;
+    min-width:100px;
+    border:1px solid #ccc;
+    height:600px;
+}
+
+#RIGHT_PANEL{
+    top: 45px;
+    right: 5px;
+    position:fixed;
+    width:8%;
+    min-width:100px;
+    border:1px solid #ccc;
+    height:600px;
+}
+#RIGHT_PANEL img{
+    width:30px;
+    height:30px;
+}
+#TOP_LEFT_REGION {
+
+}
+#TOP_LEFT_REGION ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#TOP_LEFT_REGION li {
+    float: left;
+}
+
+#TOP_LEFT_REGION li a {
+    display: block;
+    color:white;
+    font-weight:bold;
+    font-size:12px;
+    text-align: center;
+    padding: 5px 16px;
+    margin-top:5px;
+    height:25px;
+    text-decoration: none;
+}
+#TOP_LEFT_REGION li:hover {
+    background-color: #111;
+}
+#TOP_CENTER_REGION {
+    margin-right:100px;
+    padding:5px 10px;
+}
+#TOP_CENTER_REGION img {
+    width:30px;
+    height:30px;
+    margin-right:5px;
+}
+
+#BANNER_REGION{
+    top:40px;
+    height: 160px;
+    background: #fff;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.1);
+    margin-top:5px;
+}
+#headerSearch{
+    position:absolute;
+    bottom:0px;
+    right:20px;
+}
+#profile{
+    top:10px;
+    right:20px;
+    float:right;
+    margin: .5rem;
+    height:60px;
+    padding: .5rem 1rem;
+}
+#profile p,#profile img{
+    display:inline-block;
+}
+#avatar{
+    padding: .5rem 1rem;
+    background: #fff;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.1);
+    width:40px;
+    height:50px;
+    border:1px solid #ccc;
+}
+/*** HEADER END ***/
+
+
+
+
+/*** BODY ***/
+#LEFT_REGION {
+    width:24%;
+    text-align:left;
+}
+#CENTER_REGION {
+    width:75%;
+    text-align:left;
+}
+
+.LEFT_REGION{
+    float: none;
+    padding: .5rem 1rem;
+    margin: .5rem;
+    background: #fff;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.1);
+    margin-left: 0;
+    width: auto;
+}
+.LEFT_HEADER {
+    border-bottom : 1px solid #ccc;
+    padding:5px 10px;
+    
+    height:15px;
+}
+.LEFT_CONTENT ul {
+    margin: 0; 
+    padding: 0;
+    width:100%;
+    list-style-type: none;
+}
+.LEFT_CONTENT ul li a {
+    text-decoration: none;
+    text-align:left;
+    padding: 10.5px 11px;
+    display:block;
+    border-bottom: 1px solid #f0f0f0;
+}
+ 
+.LEFT_CONTENT ul li a:visited {
+    //color: white;
+}
+ 
+.LEFT_CONTENT ul li a:hover, .LEFT_CONTENT ul li .current {
+    //color: white;
+    background-color: #5FD367;
+}
+
+
+.CENTER_REGION{
+    float: none;
+    padding: .5rem 1rem;
+    margin-top: .5rem;
+    background: #fff;
+    box-shadow: 0.1rem 0.1rem 0.2rem rgba(0,0,0,0.1);
+    margin-left: 0;
+    width: auto;
+}
+.CENTER_HEADER {
+    border-bottom : 1px solid #ccc;
+    padding:5px 10px;
+    margin-bottom:5px;
+    height:15px;
+}
+.CENTER_CONTENT{
+    text-align:center;  
+}
+.slideshow{
+    height:250px;
+}
+.block{
+    display:inline-block;
+    margin:0 5px;
+    padding:5px;
+    border:1px solid #eee;
+    width:150px;
+    height:200px;
+}
+
+
+/*** BODY END ***/
