@@ -4,73 +4,149 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
         <title>{!TITLE!}</title>
         <link rel="stylesheet" href="reset.css" type="text/css" charset="utf-8" />
         <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
         
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
+    
+        <script>
+            $(function() {
+                $( "#LEFT_MENU" ).accordion({
+                    collapsible: true,
+                    active:false
+                });
+                $('.open').click(function () {
+                    $('.ui-accordion-header').removeClass('ui-corner-all').addClass('ui-accordion-header-active ui-state-active ui-corner-top').attr({'aria-selected':'true','tabindex':'0'});
+                    $('.ui-accordion-header .ui-icon').removeClass('ui-icon-triangle-1-e').addClass('ui-icon-triangle-1-s');
+                    $('.ui-accordion-content').addClass('ui-accordion-content-active').attr({'aria-expanded':'true','aria-hidden':'false'}).show();
+                    $(this).hide();
+                    $('.close').show();
+                });
+                $('.close').click(function () {
+                    $('.ui-accordion-header').removeClass('ui-accordion-header-active ui-state-active ui-corner-top').addClass('ui-corner-all').attr({'aria-selected':'false','tabindex':'-1'});
+                    $('.ui-accordion-header .ui-icon').removeClass('ui-icon-triangle-1-s').addClass('ui-icon-triangle-1-e');
+                    $('.ui-accordion-content').removeClass('ui-accordion-content-active').attr({'aria-expanded':'false','aria-hidden':'true'}).hide();
+                    $(this).hide();
+                    $('.open').show();
+                });
+                $('.ui-accordion-header').click(function () {
+                    $('.open').show();
+                    $('.close').show();
+                });
+            });
+        </script>
+    
     </head>
 
     <body>
         <div id="header" >
             <div id="topPanel">
-                <div class="CONTENT">
+                <div class="CONTENT" style="width:80%">
+                    <!-- {!LOGO_01!} -->
                     <div id="logo">
-                        {!LOGO_01!}
+                        <img src="images/logo.jpg"/>
                     </div>
                     
+                    <!-- {!TOP_LEFT_REGION!} -->
                     <ul id="TOP_LEFT_REGION" class="left">
-                      <li><a href="default.asp">Home</a></li>
-                      <li><a href="news.asp">News</a></li>
-                      <li><a href="contact.asp">Contact</a></li>
-                      <li><a href="about.asp">About</a></li>
-                      {!TOP_LEFT_REGION!}
+                        <li><a href="default.asp">Home</a></li>
+                        <li><a href="news.asp">News</a></li>
+                        <li><a href="contact.asp">Contact</a></li>
+                        <li><a href="about.asp">About</a></li>
+                      
                     </ul>
                     <div id="TOP_CENTER_REGION" class="right">
-                        <a><img src="/"/></a>
-                        <a><img src="/"/></a>
-                        <a><img src="/"/></a>
+                        <div id="profile" >
+                            <p> Login</p>
+                            <img id="avatar" src="images/icon/guest.PNG"/>
+                        </div>
                     </div>
+                </div>
+                <div id="TOP_RIGHT_REGION" class="right">
+                    <a><img src="images/icon/fb-64.PNG"/></a>
+                    <a><img src="images/icon/gmail-64.PNG"/></a>
+                    <a><img src="images/icon/phone-64.PNG"/></a>
                 </div>
             </div>
             <div id="LEFT_PANEL">
+                <!--
                 {!LEFT_PANEL_01!}
                 {!LEFT_PANEL_02!}
                 {!LEFT_PANEL_03!}
                 {!LEFT_PANEL_04!}
                 {!LEFT_PANEL_05!}
+                -->
             </div>
+            
+            
             <div id="RIGHT_PANEL">
+                <div id="RIGHT_PANEL_01">
+
+                </div>
+                <!--
                 {!RIGHT_PANEL_01!}
                 {!RIGHT_PANEL_02!}
                 {!RIGHT_PANEL_03!}
                 {!RIGHT_PANEL_04!}
                 {!RIGHT_PANEL_05!}
+                -->
             </div>
             <div class="CONTENT" id="BANNER_REGION">
-                <div id="profile">
-                    <p> Welcome Guest !</p>
-                    <img id="avatar" src="images/icon/guest.PNG"/>
+                <img style="position:absolute;left:0;width:100%;" src="images/banner.JPG"/>
+                <div id="SEARCH_HEADER">
+                    <table>
+                        <tr>
+                            <td>Tên sách</td>
+                            <td><input type="text" placeholder="Tìm kiếm sách" maxlength="40"/></td>
+                        </tr>
+                        <tr>
+                            <td>Thể loại</td>
+                            <td><input type="text" placeholder="Tìm kiếm sách" maxlength="40"/></td>
+                        </tr>
+                    </table>
+                    
+                    <button><img style="vertical-align:middle" src="images/icon/search-32.png"/></button>
                 </div>
-                <img id="headerSearch" src="images/searchPanel.JPG"/>
+                
             </div>
         </div>
         <div class="CONTENT" id="body">
             <div id="LEFT_REGION" class="left">
+                
+                <!-- {!LEFT_REGION_01!} -->
                 <div class="LEFT_REGION">
                     <div class="LEFT_HEADER">
-                        {!LEFT_REGION_01!}
+                        Danh mục
+                        <button type="button" class="open right" style="padding:5px 10px">+</button>
+                        <button type="button" class="close right"  style="padding:5px 10px">-</button>
                     </div>
                     <div class="LEFT_CONTENT">
-                        <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                        </ul>
-                    </div>
 
+                        <div id="LEFT_MENU">
+                            <h3><a href="#">Tin học</a></h3>
+                            <div>
+                                <ul>
+                                    <li><a href="#">Công nghệ thông tin</a></li>
+                                    <li><a href="#">Internet</a></li>
+                                    <li><a href="#">Khoa học máy tính</a></li>
+                                    <li><a href="#">Lập trình</a></li>
+                                </ul>
+                            </div>
+                            <h3><a href="#">Khoa học</a></h3>
+                            <div>
+                                <ul>
+                                    <li><a href="#">Công nghệ thông tin</a></li>
+                                    <li><a href="#">Internet</a></li>
+                                    <li><a href="#">Khoa học máy tính</a></li>
+                                    <li><a href="#">Lập trình</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    
+                    </div>
                 </div>
                 <div class="LEFT_REGION">
                     <div class="LEFT_HEADER">
@@ -104,12 +180,11 @@
                 {!LEFT_REGION_10!}
             </div>
             <div id="CENTER_REGION" class="right ">
-                <div class="CENTER_REGION">
+
+                <div class="CENTER_REGION" >
                     <div class="CENTER_HEADER">
-                        {!CENTER_MENU_01!}
+                        Sách hot trong tuần
                     </div>
-                </div>
-                <div class="CENTER_REGION" style="margin-top:0px">
                     <div class="slideshow">
                         {!SLIDESHOW_01!}
                     </div>
@@ -119,10 +194,30 @@
                         {!CENTER_REGION_01!}
                     </div>
                     <div class="CENTER_CONTENT">
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
+                        <div class="BOOK_BLOCK">
+                            <img src="images/books/1.jpg"/>
+                            <a>Harry Potter and the Philosopher's Stone</a>
+                            <p>J.K Rowling</p>
+                            <button>2,000 VNĐ</button>
+                        </div>
+                        <div class="BOOK_BLOCK">
+                            <img src="images/books/2.jpg"/>
+                            <a>The Power</a>
+                            <p>J.K Rowling</p>
+                            <button>12,000 VNĐ</button>
+                        </div>
+                        <div class="BOOK_BLOCK">
+                            <img src="images/books/3.jpg"/>
+                            <a>The Power</a>
+                            <p>J.K Rowling</p>
+                            <button>22,000 VNĐ</button>
+                        </div>
+                        <div class="BOOK_BLOCK">
+                            <img src="images/books/4.jpg"/>
+                            <a>The Power</a>
+                            <p>J.K Rowling</p>
+                            <button>50,000 VNĐ</button>
+                        </div>
                     </div>
                 </div>
                 <div class="CENTER_REGION">
@@ -130,10 +225,10 @@
                         {!CENTER_REGION_02!}
                     </div>
                     <div class="CENTER_CONTENT">
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
                     </div>
                 </div>
                 <div class="CENTER_REGION">
@@ -141,10 +236,10 @@
                         {!CENTER_REGION_03!}
                     </div>
                     <div class="CENTER_CONTENT">
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
                     </div>
                 </div>
                 <div class="CENTER_REGION">
@@ -152,10 +247,10 @@
                         {!CENTER_REGION_04!}
                     </div>
                     <div class="CENTER_CONTENT">
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
                     </div>
                 </div>
                 <div class="CENTER_REGION">
@@ -163,10 +258,10 @@
                         {!CENTER_REGION_05!}
                     </div>
                     <div class="CENTER_CONTENT">
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
-                        <div class="block"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
+                        <div class="BOOK_BLOCK"></div>
                     </div>
                 </div>
                 <div class="CENTER_REGION" style="margin-bottom:5px;"> 
