@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="DNB_Messages" table="DNB_Messages" lazy="true" >
+    <id name="Id" column="Id" />
+    <many-to-one name="DNB_Users">
+      <column name="UserFromId" sql-type="uniqueidentifier" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DNB_Users">
+      <column name="UserToId" sql-type="uniqueidentifier" not-null="false" />
+    </many-to-one>
+    <property name="Title">
+      <column name="Title" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Contents">
+      <column name="Contents" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="ImportantLevel">
+      <column name="ImportantLevel" sql-type="tinyint" not-null="false" />
+    </property>
+    <property name="Status">
+      <column name="Status" sql-type="varchar" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>

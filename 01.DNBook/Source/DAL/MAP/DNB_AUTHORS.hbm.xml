@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="AuthorDTO" table="[dbo].[DNB_AUTHORS]" lazy="true" >
+    <id name="Id" column="Id" />
+    <property name="Fullname">
+      <column name="Fullname" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Description">
+      <column name="Description" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Avatar">
+      <column name="Avatar" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Url">
+      <column name="Url" sql-type="nvarchar" not-null="false" />
+    </property>
+    <bag name="DNB_BOOKS">
+      <key column="AuthorId" />
+      <one-to-many class="DNB_BOOKS" />
+    </bag>
+  </class>
+</hibernate-mapping>

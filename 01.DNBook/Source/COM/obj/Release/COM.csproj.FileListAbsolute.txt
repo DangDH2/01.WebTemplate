@@ -1,0 +1,5 @@
+D:\_Projects\01.DNBook\Source\COM\bin\Release\COM.dll
+D:\_Projects\01.DNBook\Source\COM\bin\Release\COM.pdb
+D:\_Projects\01.DNBook\Source\COM\obj\Release\COM.csprojResolveAssemblyReference.cache
+D:\_Projects\01.DNBook\Source\COM\obj\Release\COM.dll
+D:\_Projects\01.DNBook\Source\COM\obj\Release\COM.pdb

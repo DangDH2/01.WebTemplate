@@ -1,0 +1,9 @@
+D:\_Projects\01.DNBook\Source\DAL\bin\Release\DAL.dll
+D:\_Projects\01.DNBook\Source\DAL\bin\Release\DAL.pdb
+D:\_Projects\01.DNBook\Source\DAL\bin\Release\COM.dll
+D:\_Projects\01.DNBook\Source\DAL\bin\Release\Iesi.Collections.dll
+D:\_Projects\01.DNBook\Source\DAL\bin\Release\NHibernate.dll
+D:\_Projects\01.DNBook\Source\DAL\bin\Release\COM.pdb
+D:\_Projects\01.DNBook\Source\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\_Projects\01.DNBook\Source\DAL\obj\Release\DAL.dll
+D:\_Projects\01.DNBook\Source\DAL\obj\Release\DAL.pdb

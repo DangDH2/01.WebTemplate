@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="DNB_Users" table="DNB_Users" lazy="true" >
+    <id name="Id" column="Id" />
+    <many-to-one name="DNB_UserDetails">
+      <column name="UserDetailId" sql-type="uniqueidentifier" not-null="false" />
+    </many-to-one>
+    <property name="Username">
+      <column name="Username" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Password">
+      <column name="Password" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Gender">
+      <column name="Gender" sql-type="tinyint" not-null="false" />
+    </property>
+    <property name="Birthday">
+      <column name="Birthday" sql-type="date" not-null="false" />
+    </property>
+    <property name="Avatar">
+      <column name="Avatar" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="CMND">
+      <column name="CMND" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Email">
+      <column name="Email" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Phone">
+      <column name="Phone" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="Country">
+      <column name="Country" sql-type="tinyint" not-null="false" />
+    </property>
+    <property name="City">
+      <column name="City" sql-type="tinyint" not-null="false" />
+    </property>
+    <property name="District">
+      <column name="District" sql-type="tinyint" not-null="false" />
+    </property>
+    <property name="Ward">
+      <column name="Ward" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Street">
+      <column name="Street" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Rating">
+      <column name="Rating" sql-type="tinyint" not-null="false" />
+    </property>
+    <property name="Status">
+      <column name="Status" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="LastLoginDate">
+      <column name="LastLoginDate" sql-type="datetime" not-null="false" />
+    </property>
+    <property name="Role">
+      <column name="Role" sql-type="tinyint" not-null="false" />
+    </property>
+    <bag name="DNB_Messages">
+      <key column="UserFromId" />
+      <one-to-many class="DNB_Messages" />
+    </bag>
+    <bag name="DNB_Messages">
+      <key column="UserToId" />
+      <one-to-many class="DNB_Messages" />
+    </bag>
+    <bag name="DNB_UsersBooks">
+      <key column="UserId" />
+      <one-to-many class="DNB_UsersBooks" />
+    </bag>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="DNB_UsersBooks" table="DNB_UsersBooks" lazy="true" >
+    <id name="Id" column="Id" />
+    <many-to-one name="DNB_BOOKS">
+      <column name="BookId" sql-type="uniqueidentifier" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DNB_Users">
+      <column name="UserId" sql-type="uniqueidentifier" not-null="false" />
+    </many-to-one>
+    <property name="BookNo">
+      <column name="BookNo" sql-type="tinyint" not-null="false" />
+    </property>
+    <bag name="DNB_Hirings">
+      <key column="UsersBooksId" />
+      <one-to-many class="DNB_Hirings" />
+    </bag>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="BookDTO" table="[dbo].[DNB_BOOKS]" lazy="true" >
+    <id name="Id" column="Id" />
+    <many-to-one name="AuthorDTO">
+      <column name="AuthorId" sql-type="uniqueidentifier" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DNB_CATEGORY">
+      <column name="CategoryId" sql-type="uniqueidentifier" not-null="false" />
+    </many-to-one>
+    <property name="Title">
+      <column name="Title" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Cover">
+      <column name="Cover" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="Pictures">
+      <column name="Pictures" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="ShortDescription">
+      <column name="ShortDescription" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="LongDescription">
+      <column name="LongDescription" sql-type="nvarchar" not-null="false" />
+    </property>
+    <property name="ISBN">
+      <column name="ISBN" sql-type="varchar" not-null="false" />
+    </property>
+    <property name="PublishDate">
+      <column name="PublishDate" sql-type="date" not-null="false" />
+    </property>
+    <property name="Rating">
+      <column name="Rating" sql-type="tinyint" not-null="false" />
+    </property>
+    <property name="Price">
+      <column name="Price" sql-type="float" not-null="false" />
+    </property>
+    <property name="HirePrice">
+      <column name="HirePrice" sql-type="float" not-null="false" />
+    </property>
+    <property name="BookCount">
+      <column name="BookCount" sql-type="int" not-null="false" />
+    </property>
+    <property name="HiringCount">
+      <column name="HiringCount" sql-type="int" not-null="false" />
+    </property>
+    <bag name="DNB_BooksTags">
+      <key column="BookId" />
+      <one-to-many class="DNB_BooksTags" />
+    </bag>
+    <bag name="DNB_UsersBooks">
+      <key column="BookId" />
+      <one-to-many class="DNB_UsersBooks" />
+    </bag>
+  </class>
+</hibernate-mapping>

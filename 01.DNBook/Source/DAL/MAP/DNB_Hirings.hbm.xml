@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="DNB_Hirings" table="DNB_Hirings" lazy="true" >
+    <id name="Id" column="Id" />
+    <many-to-one name="DNB_UsersBooks">
+      <column name="UsersBooksId" sql-type="uniqueidentifier" not-null="true" />
+    </many-to-one>
+    <property name="StartDate">
+      <column name="StartDate" sql-type="date" not-null="true" />
+    </property>
+    <property name="EndDate">
+      <column name="EndDate" sql-type="date" not-null="false" />
+    </property>
+    <property name="Status">
+      <column name="Status" sql-type="varchar" not-null="false" />
+    </property>
+  </class>
+</hibernate-mapping>
