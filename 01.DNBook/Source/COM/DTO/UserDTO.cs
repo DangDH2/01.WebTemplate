@@ -8,7 +8,7 @@ namespace COM.DTO {
     public class UserDTO {
         public UserDTO() { }
         public virtual System.Guid Id { get; set; }
-        public virtual UserDetailDTO DNB_UserDetails { get; set; }
+        public virtual UserDetailDTO UserDetailDTO { get; set; }
         public virtual string Username { get; set; }
         public virtual string Password { get; set; }
         public virtual byte? Gender { get; set; }

@@ -7,7 +7,8 @@ namespace COM.DTO {
     
     public class MessageDTO {
         public virtual System.Guid Id { get; set; }
-        public virtual UserDTO DNB_Users { get; set; }
+        public virtual UserDTO UserFromDTO { get; set; }
+        public virtual UserDTO UserToDTO { get; set; }
         public virtual string Title { get; set; }
         public virtual string Contents { get; set; }
         public virtual byte? ImportantLevel { get; set; }

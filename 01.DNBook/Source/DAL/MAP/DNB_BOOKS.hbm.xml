@@ -5,7 +5,7 @@
     <many-to-one name="AuthorDTO">
       <column name="AuthorId" sql-type="uniqueidentifier" not-null="false" />
     </many-to-one>
-    <many-to-one name="DNB_CATEGORY">
+    <many-to-one name="CategoryDTO">
       <column name="CategoryId" sql-type="uniqueidentifier" not-null="false" />
     </many-to-one>
     <property name="Title">

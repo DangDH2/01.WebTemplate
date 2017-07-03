@@ -16,7 +16,7 @@
     </property>
     <bag name="DNB_BOOKS">
       <key column="AuthorId" />
-      <one-to-many class="DNB_BOOKS" />
+      <one-to-many class="BookDTO" />
     </bag>
   </class>
 </hibernate-mapping>

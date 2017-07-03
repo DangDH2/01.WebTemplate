@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="DNB_Hirings" table="DNB_Hirings" lazy="true" >
+  <class name="HiringDTO" table="[dbo].[DNB_Hirings]" lazy="true" >
     <id name="Id" column="Id" />
-    <many-to-one name="DNB_UsersBooks">
+    <many-to-one name="UserBookDTO">
       <column name="UsersBooksId" sql-type="uniqueidentifier" not-null="true" />
     </many-to-one>
     <property name="StartDate">

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="DNB_UsersBooks" table="DNB_UsersBooks" lazy="true" >
+  <class name="UserBookDTO" table="[dbo].[DNB_UsersBooks]" lazy="true" >
     <id name="Id" column="Id" />
-    <many-to-one name="DNB_BOOKS">
+    <many-to-one name="BookDTO">
       <column name="BookId" sql-type="uniqueidentifier" not-null="false" />
     </many-to-one>
-    <many-to-one name="DNB_Users">
+    <many-to-one name="UserDTO">
       <column name="UserId" sql-type="uniqueidentifier" not-null="false" />
     </many-to-one>
     <property name="BookNo">
@@ -13,7 +13,7 @@
     </property>
     <bag name="DNB_Hirings">
       <key column="UsersBooksId" />
-      <one-to-many class="DNB_Hirings" />
+      <one-to-many class="HiringDTO" />
     </bag>
   </class>
 </hibernate-mapping>

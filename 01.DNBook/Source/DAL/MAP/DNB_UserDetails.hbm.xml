@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="DNB_UserDetails" table="DNB_UserDetails" lazy="true" >
+  <class name="UserDetailDTO" table="[dbo].[DNB_UserDetails]" lazy="true" >
     <id name="Id" column="Id" />
     <property name="SecondEmail">
       <column name="SecondEmail" sql-type="varchar" not-null="false" />
@@ -25,7 +25,7 @@
     </property>
     <bag name="DNB_Users">
       <key column="UserDetailId" />
-      <one-to-many class="DNB_Users" />
+      <one-to-many class="UserDTO" />
     </bag>
   </class>
 </hibernate-mapping>

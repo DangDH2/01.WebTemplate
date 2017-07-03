@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="DNB_Messages" table="DNB_Messages" lazy="true" >
+  <class name="MessageDTO" table="[dbo].[DNB_Messages]" lazy="true" >
     <id name="Id" column="Id" />
-    <many-to-one name="DNB_Users">
+    <many-to-one name="UserFromDTO">
       <column name="UserFromId" sql-type="uniqueidentifier" not-null="false" />
     </many-to-one>
-    <many-to-one name="DNB_Users">
+    <many-to-one name="UserToDTO">
       <column name="UserToId" sql-type="uniqueidentifier" not-null="false" />
     </many-to-one>
     <property name="Title">

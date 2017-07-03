@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <hibernate-mapping assembly="COM" namespace="COM.DTO" xmlns="urn:nhibernate-mapping-2.2">
-  <class name="DNB_MASTERS" table="DNB_MASTERS" lazy="true" >
+  <class name="MasterDTO" table="[dbo].[DNB_MASTERS]" lazy="true" >
     <id name="MKEY" column="MKEY" />
     <property name="MVALUE">
       <column name="MVALUE" sql-type="nvarchar" not-null="false" />

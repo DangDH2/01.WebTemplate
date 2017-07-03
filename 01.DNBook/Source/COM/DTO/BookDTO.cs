@@ -8,8 +8,8 @@ namespace COM.DTO {
     public class BookDTO {
         public BookDTO() { }
         public virtual System.Guid Id { get; set; }
-        public virtual AuthorDTO Author { get; set; }
-        public virtual CategoryDTO Category { get; set; }
+        public virtual AuthorDTO AuthorDTO { get; set; }
+        public virtual CategoryDTO CategoryDTO { get; set; }
         public virtual string Title { get; set; }
         public virtual string Cover { get; set; }
         public virtual string Pictures { get; set; }
