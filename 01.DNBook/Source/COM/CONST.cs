@@ -33,24 +33,6 @@ namespace COM
 
         }
 
-        public class GENDER
-        {
-            public const string MALE = "M";
-            public const string FEMALE = "F";
-            public const string UNKNOWN_GENDER = "U";
-        }
-        public class SESSION
-        {
-            public const string USER = "SESSION_USER";
-            public const string PRODUCT = "SESSION_PRODUCT";
-            public const string CATEGORY = "SESSION_CATEGORY";
-            
-        }
-        public class PAGE
-        {
-            public const string ADMIN_INDEX = "/admin/index.aspx";
-            public const string ADMIN_LOGIN = "/admin/login.aspx";
-        }
 
     }
 }
